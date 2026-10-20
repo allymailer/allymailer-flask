@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "allymailer-flask"
+version = "1.0.0"
+description = "AllyMailer Web API for Flask: API client, webhooks"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "AllyMailer" }]
+keywords = ["allymailer", "flask", "email", "webhook"]
+classifiers = ["Framework :: Flask"]
+dependencies = ["allymailer-python-sdk>=1.0.0", "Flask>=2.3"]
+
+[project.urls]
+Homepage = "https://github.com/allymailer/allymailer-flask"
+Documentation = "https://docs.allymailer.com.ua/ua/web-api-ref"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["py.typed"]
