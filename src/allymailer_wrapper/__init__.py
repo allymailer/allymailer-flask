@@ -19,7 +19,7 @@ from . import webhook as notifications
 from ._settings import Settings
 
 __all__ = ["AllyMailer", "get_client", "webhook_received", "webhook_event_received", "Settings"]
-__version__ = "1.1.1"
+__version__ = "1.1.2"
 
 _signals = Namespace()
 webhook_received = _signals.signal("allymailer-webhook-received")
@@ -40,7 +40,7 @@ class _State:
     def client(self) -> AllyMailerClient:
         if self._client is None:
             s = self.settings
-            self._client = AllyMailerClient(s.require_key(), s.host, s.timeout, platform="flask.1.1.1")
+            self._client = AllyMailerClient(s.require_key(), s.host, s.timeout, platform="flask.1.1.2")
         return self._client
 
 
